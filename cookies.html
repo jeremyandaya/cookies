@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Cookies.js/1.2.1/cookies.js"></script>
+	<script>
+		function setCookie(){
+			cookieValue = escape(document.cookieForm.username.value);
+			document.cookie = 	"name=" + cookieValue + ";";
+			document.write("Set Cookie: " + "name=" + cookieValue);
+		}
+
+		function getCookie(){
+			var getCookies = document.cookie;
+			document.write("Cookie is: " + getCookies)
+		}
+	</script>
+</head>
+<body>
+	<form name="cookieForm" action="">
+		Enter name: <input type="text" name="username"/>
+		<input type="button" value="Set Cookie" onclick="setCookie()"/>
+	</form>
+
+	<form name="myform" action="">
+		<input type="button" value="Get Cookie" onclick="getCookie()"/>
+	</form>
+</body>
+</html>
