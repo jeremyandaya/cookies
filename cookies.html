@@ -4,7 +4,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Cookies.js/1.2.1/cookies.js"></script>
 	<script>
 		function setCookie(){
-			cookieValue = escape(document.cookieForm.username.value);
+			cookieValue = escape(document.setCookieForm.username.value);
 			document.cookie = "name=" + cookieValue + ";";
 			document.write("Set Cookie: " + "name=" + cookieValue);
 		}
@@ -16,12 +16,12 @@
 	</script>
 </head>
 <body>
-	<form name="cookieForm" action="">
+	<form name="setCookieForm" action="">
 		Enter name: <input type="text" name="username"/>
 		<input type="button" value="Set Cookie" onclick="setCookie()"/>
 	</form>
 
-	<form name="myform" action="">
+	<form name="getCookieForm" action="">
 		<input type="button" value="Get Cookie" onclick="getCookie()"/>
 	</form>
 </body>
